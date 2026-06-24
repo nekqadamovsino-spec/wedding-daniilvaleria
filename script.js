@@ -26,4 +26,11 @@ const rsvpModal = document.getElementById('rsvpModal');
 
 openRsvp.onclick = function(){
     rsvpModal.style.display = 'flex';
+  const openRsvp = document.getElementById('openRsvp');
+const rsvpModal = document.getElementById('rsvpModal');
+
+openRsvp.addEventListener('click', () => {
+    rsvpModal.style.display = 'block';
+});
 }
+

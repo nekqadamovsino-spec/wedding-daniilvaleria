@@ -54,4 +54,4 @@ rsvpModal.onclick = (e) => {
   if(e.target === rsvpModal){
     rsvpModal.style.display = 'none';
   }
-};
+});

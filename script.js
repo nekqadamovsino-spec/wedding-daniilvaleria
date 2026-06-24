@@ -33,3 +33,25 @@ const rsvpModal = document.getElementById('rsvpModal');
 openRsvp.addEventListener('click', () => {
   rsvpModal.style.display = 'flex';
 });
+const openRsvp = document.getElementById('openRsvp');
+const closeRsvp = document.getElementById('closeRsvp');
+const rsvpModal = document.getElementById('rsvpModal');
+const submitRsvp = document.getElementById('submitRsvp');
+
+openRsvp.onclick = () => {
+  rsvpModal.style.display = 'flex';
+};
+
+closeRsvp.onclick = () => {
+  rsvpModal.style.display = 'none';
+};
+
+submitRsvp.onclick = () => {
+  rsvpModal.style.display = 'none';
+};
+
+rsvpModal.onclick = (e) => {
+  if(e.target === rsvpModal){
+    rsvpModal.style.display = 'none';
+  }
+};

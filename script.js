@@ -21,3 +21,6 @@ const observer = new IntersectionObserver(entries => {
   });
 },{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.getElementById('openRsvp').onclick = function(){
+    alert('Окно открылось');
+}

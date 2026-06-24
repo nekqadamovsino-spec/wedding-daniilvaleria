@@ -5,15 +5,10 @@ function tick(){
   let diff = weddingDate - now;
   if(diff < 0) diff = 0;
 
-  const d = Math.floor(diff / (1000*60*60*24));
-  const h = Math.floor((diff / (1000*60*60)) % 24);
-  const m = Math.floor((diff / (1000*60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-
-  days.textContent = d;
-  hours.textContent = String(h).padStart(2,'0');
-  minutes.textContent = String(m).padStart(2,'0');
-  seconds.textContent = String(s).padStart(2,'0');
+  days.textContent = Math.floor(diff / (1000*60*60*24));
+  hours.textContent = String(Math.floor((diff / (1000*60*60)) % 24)).padStart(2,'0');
+  minutes.textContent = String(Math.floor((diff / (1000*60)) % 60)).padStart(2,'0');
+  seconds.textContent = String(Math.floor((diff / 1000) % 60)).padStart(2,'0');
 }
 
 tick();
@@ -27,12 +22,6 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-const openRsvp = document.getElementById('openRsvp');
-const rsvpModal = document.getElementById('rsvpModal');
-
-openRsvp.addEventListener('click', () => {
-  rsvpModal.style.display = 'flex';
-});
 const openRsvp = document.getElementById('openRsvp');
 const closeRsvp = document.getElementById('closeRsvp');
 const rsvpModal = document.getElementById('rsvpModal');
@@ -54,4 +43,4 @@ rsvpModal.onclick = (e) => {
   if(e.target === rsvpModal){
     rsvpModal.style.display = 'none';
   }
-});
+};
